@@ -1,3 +1,30 @@
-<p>
-  details works!
-</p>
+<div class="wrapper">
+  <div class="row">
+    <div class="avatar">
+      <img src="{{user.avatar}}">
+    </div>
+    <div class="user-details">
+      <div class="name">{{user.firstName}} {{user.lastName}}</div>
+      <div class="country">{{user.country}}, {{user.city}}</div>
+    </div>
+  </div>
+  <div class="social">
+    <div class="row">
+      <div class="column">
+        <div class="number">{{user.likes}}</div>
+        <div class="name">Likes</div>
+      </div>
+      <div class="column">
+        <div class="number">{{user.following}}</div>
+        <div class="name">Following</div>
+      </div>
+      <div class="column">
+        <div class="number">{{user.followers}}</div>
+        <div class="name">Followers</div>
+      </div>
+      <div class="column">
+        <button class="follow-button">Follow</button>
+      </div>
+    </div>
+  </div>
+</div>

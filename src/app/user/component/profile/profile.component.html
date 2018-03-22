@@ -1,2 +1,10 @@
-<app-details></app-details>
-<app-comment></app-comment>
+<div class="wrapper">
+  <div class="header">
+    <div class="details">
+      <app-details *ngIf="user" [user]="user"></app-details>
+    </div>
+  </div>
+  <div class="comments" *ngFor="let comment of user.comments">
+    <app-comment></app-comment>
+  </div>
+</div>

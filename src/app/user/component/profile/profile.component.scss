@@ -1,0 +1,18 @@
+@import "../../../../assets/styles/colors";
+
+.wrapper {
+  border-radius: 4px;
+
+  .header {
+    padding: 47px 0 48px;
+    background: $blue;
+    position: relative;
+  }
+
+  .details {
+    padding: 17px;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+}
