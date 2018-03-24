@@ -1,29 +1,41 @@
-<div class="wrapper">
-  <div class="row">
+<div class="box">
+  <div class="share">
+    <button class="share-button">
+      <i class="fa fa-share-square-o"></i>
+    </button>
+  </div>
+  <div class="row user">
     <div class="avatar">
       <img src="{{user.avatar}}">
     </div>
     <div class="user-details">
-      <div class="name">{{user.firstName}} {{user.lastName}}</div>
+      <div class="name row">
+        <div>{{user.firstName}} {{user.lastName}}</div>
+        <button class="like-button" (click)="addLike()">
+          <i class="fa fa-heart-o"></i>
+        </button>
+      </div>
       <div class="country">{{user.country}}, {{user.city}}</div>
     </div>
   </div>
   <div class="social">
     <div class="row">
       <div class="column">
-        <div class="number">{{user.likes}}</div>
+        <div class="number">{{likes}}</div>
         <div class="name">Likes</div>
       </div>
+      <div class="delimeter"></div>
       <div class="column">
         <div class="number">{{user.following}}</div>
         <div class="name">Following</div>
       </div>
+      <div class="delimeter"></div>
       <div class="column">
-        <div class="number">{{user.followers}}</div>
+        <div class="number">{{followers}}</div>
         <div class="name">Followers</div>
       </div>
-      <div class="column">
-        <button class="follow-button">Follow</button>
+      <div class="column follow-column">
+        <button class="follow-button" (click)="addFollower()">Follow</button>
       </div>
     </div>
   </div>

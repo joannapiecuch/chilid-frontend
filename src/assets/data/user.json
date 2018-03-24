@@ -12,27 +12,27 @@
     {
       "owner": {
         "firstName": "Mike",
-        "lastName": "Ross"
+        "lastName": "Ross",
+        "avatar": "assets/images/mike_ross.jpg"
       },
-      "avatar": "assets/images/mike_ross.jpg",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "creationDate": "2018-03-21T18:25:43.511Z"
     },
     {
       "owner": {
         "firstName": "Rachel",
-        "lastName": "Zane"
+        "lastName": "Zane",
+        "avatar": "assets/images/rachel_zane.jpg"
       },
-      "avatar": "assets/images/rachel_zane.jpg",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "creationDate": "2018-03-21T18:25:43.511Z"
     },
     {
       "owner": {
         "firstName": "Louis",
-        "lastName": "Litt"
+        "lastName": "Litt",
+        "avatar": "assets/images/louis_litt.jpg"
       },
-      "avatar": "assets/images/louis_litt.jpg",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "creationDate": "2018-03-21T18:25:43.511Z"
     }

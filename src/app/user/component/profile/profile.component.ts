@@ -18,6 +18,5 @@ export class ProfileComponent implements OnInit {
     this.userService.getUser().subscribe((user: UserInterface) => {
       this.user = user;
     });
-
   }
 }
