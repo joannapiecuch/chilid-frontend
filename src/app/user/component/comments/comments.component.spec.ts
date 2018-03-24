@@ -83,4 +83,11 @@ describe('CommentsComponent', () => {
     const ngxAutoScroll: NgxAutoScroll = fixture.componentInstance.ngxAutoScroll;
     expect(ngxAutoScroll).toBeDefined();
   });
+
+  it('should add new comment', () => {
+    component.form.controls['content'].setValue('Test');
+    component.submit();
+
+    expect(component.user.comments.length).toBe(2);
+  });
 });

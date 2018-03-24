@@ -27,15 +27,11 @@ export class CommentsComponent {
     });
   }
 
-  forceScrollDown(): void {
-    this.ngxAutoScroll.forceScrollDown();
-  }
-
   submit() {
     if (this.form.valid) {
       const formData = {...this.form.value, creationDate: new Date()};
       this.user.comments.push(formData);
-      this.forceScrollDown();
+      this.ngxAutoScroll.forceScrollDown();
       this.form.get('content').reset();
     }
   }
