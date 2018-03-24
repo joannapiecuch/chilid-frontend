@@ -82,16 +82,16 @@
           color: $lightBlue;
           font-size: 0.625em;
         }
-      }
 
-      .follow-button {
-        background: $orange;
-        color: #fff;
-        text-transform: uppercase;
-        padding: 12px 23px;
-        font-size: 0.75em;
-        letter-spacing: 3px;
-        border-radius: 30px;
+        .follow-button {
+          background: $orange;
+          color: #fff;
+          text-transform: uppercase;
+          padding: 12px 23px;
+          font-size: 0.75em;
+          letter-spacing: 3px;
+          border-radius: 30px;
+        }
       }
     }
   }
@@ -127,16 +127,18 @@
     .social {
       .row {
         flex-wrap: wrap;
-      }
 
-      .follow-column {
-        width: 100%;
-      }
-
-      .column {
-        .follow-button {
+        .follow-column {
           width: 100%;
-          margin-top: 20px;
+        }
+
+        .column {
+          padding: 0 17px;
+
+          .follow-button {
+            width: 100%;
+            margin-top: 20px;
+          }
         }
       }
     }

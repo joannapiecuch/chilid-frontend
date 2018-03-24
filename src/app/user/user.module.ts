@@ -25,7 +25,7 @@ import {OrderByPipe} from './pipe/orderByPipe';
     MomentModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxAutoScrollModule
+    NgxAutoScrollModule,
   ],
   exports: [
     ProfileComponent

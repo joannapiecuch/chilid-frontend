@@ -7,6 +7,7 @@
     padding: 47px 0 48px;
     background: $blue;
     position: relative;
+    margin-bottom: 30px;
   }
 
   .details {
@@ -23,5 +24,13 @@
     position: absolute;
     right: 0;
     left: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .wrapper {
+    .comments {
+      top: 280px;
+    }
   }
 }

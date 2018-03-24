@@ -9,6 +9,7 @@
     font-size: 0.875em;
     margin-bottom: 30px;
     text-decoration: underline;
+    cursor: pointer;
   }
 
   .list-comments {
@@ -56,7 +57,7 @@
       align-items: center;
 
       .form-group {
-        width: 413px;
+        width: 98%;
       }
 
       #content {
@@ -82,6 +83,14 @@
         margin-left: 18px;
         margin-top: 5px;
       }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .box {
+    .count-comments {
+      text-align: center;
     }
   }
 }

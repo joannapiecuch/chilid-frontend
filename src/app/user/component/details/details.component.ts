@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {UserInterface} from '../../model/user.interface';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -11,6 +12,10 @@ export class DetailsComponent implements OnInit {
   @Input() user: UserInterface;
   likes: number;
   followers: number;
+  @Output() share: EventEmitter<any> = new EventEmitter();
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.likes = this.user.likes;
