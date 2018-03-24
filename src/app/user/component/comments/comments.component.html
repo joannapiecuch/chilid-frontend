@@ -1,0 +1,36 @@
+<div class="box">
+  <div class="list-comments" ngx-auto-scroll>
+    <div class="count-comments">Hide comments ({{user.totalComments}})</div>
+    <div class="single-comment" *ngFor="let comment of user.comments | orderBy">
+      <div class="row">
+        <div class="avatar">
+          <img src="{{comment.owner.avatar}}">
+        </div>
+        <div class="details">
+          <div class="owner">{{comment.owner.firstName}} {{comment.owner.lastName}}</div>
+          <div class="time">{{comment.creationDate | amTimeAgo}}</div>
+        </div>
+      </div>
+      <div class="content">{{comment.content}}</div>
+    </div>
+
+    <div class="add-comment">
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row new-comment">
+          <div class="form-group">
+            <input type="text"
+                   class="form-control"
+                   id="content"
+                   placeholder="Add a comment"
+                   formControlName="content"
+                   [ngClass]="{error: !form.get('content').valid && form.get('content').touched}"
+            >
+            <div *ngIf="form.get('content').hasError('required') && form.get('content').touched" class="error-message">
+              Field is required
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

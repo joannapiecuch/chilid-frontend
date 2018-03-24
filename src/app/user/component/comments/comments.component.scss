@@ -1,0 +1,87 @@
+@import "../../../../assets/styles/colors";
+
+.box {
+  font-size: 0.875em;
+  padding-right: 5px;
+
+  .count-comments {
+    color: $orange;
+    font-size: 0.875em;
+    margin-bottom: 30px;
+    text-decoration: underline;
+  }
+
+  .list-comments {
+    padding-right: 15px;
+    max-height: 500px;
+    overflow: scroll;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      margin-right: 5px;
+    }
+
+    .single-comment {
+      border-bottom: 1px solid $lightGray;
+      margin-bottom: 30px;
+
+      .row {
+        align-items: center;
+      }
+
+      .details {
+        display: flex;
+        justify-content: space-between;
+        flex: 1;
+
+        .time {
+          color: $lightBlue;
+        }
+
+        .owner {
+          color: $blue;
+        }
+      }
+
+      .content {
+        margin-bottom: 30px;
+        color: $darkGray;
+        padding-left: 45px;
+        line-height: 21px;
+      }
+    }
+
+    .new-comment {
+      align-items: center;
+
+      .form-group {
+        width: 413px;
+      }
+
+      #content {
+        font-size: 1.125em;
+        outline: none;
+        margin-left: 18px;
+        color: $darkGray;
+        border: none;
+        border-bottom: 2px solid #DBE0E8;
+        padding-bottom: 5px;
+        width: 100%;
+        &::placeholder {
+          color: $lightBlue;
+        }
+
+        &.error {
+          border-bottom: 2px solid red;
+        }
+      }
+
+      .error-message {
+        color: red;
+        margin-left: 18px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

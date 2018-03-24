@@ -5,5 +5,5 @@ export interface CommentInterface {
     avatar: string
   };
   content: string;
-  creationTime: Date;
+  creationDate: Date;
 }

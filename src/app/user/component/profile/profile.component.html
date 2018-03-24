@@ -4,7 +4,7 @@
       <app-details *ngIf="user" [user]="user"></app-details>
     </div>
   </div>
-  <!--<div class="comments" *ngFor="let comment of user.comments">-->
-    <!--<app-comment></app-comment>-->
-  <!--</div>-->
+  <div class="comments">
+    <app-comments *ngIf="user" [user]="user"></app-comments>
+  </div>
 </div>

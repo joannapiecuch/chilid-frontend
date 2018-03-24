@@ -1,22 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import {MomentModule} from 'angular2-moment';
+import {NgxAutoScrollModule} from 'ngx-auto-scroll';
 import {ProfileComponent} from './component/profile/profile.component';
 import { DetailsComponent } from './component/details/details.component';
-import { CommentComponent } from './component/comment/comment.component';
 import {UserService} from './service/user.service';
+import {CommentsComponent} from './component/comments/comments.component';
+import {OrderByPipe} from './pipe/orderByPipe';
 
 
 @NgModule({
   declarations: [
     ProfileComponent,
     DetailsComponent,
-    CommentComponent,
+    CommentsComponent,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxAutoScrollModule
   ],
   exports: [
     ProfileComponent

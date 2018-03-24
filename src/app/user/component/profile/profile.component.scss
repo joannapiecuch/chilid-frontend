@@ -10,10 +10,18 @@
   }
 
   .details {
+    top: 26px;
     padding: 17px;
     position: absolute;
     right: 0;
     left: 0;
-    top: 26px;
+  }
+
+  .comments {
+    top: 230px;
+    padding: 17px;
+    position: absolute;
+    right: 0;
+    left: 0;
   }
 }
