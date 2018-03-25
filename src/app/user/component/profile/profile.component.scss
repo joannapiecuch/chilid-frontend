@@ -1,36 +1,19 @@
 @import "../../../../assets/styles/colors";
 
-.wrapper {
-  border-radius: 4px;
-
-  .header {
-    padding: 47px 0 48px;
-    background: $blue;
-    position: relative;
-    margin-bottom: 30px;
-  }
-
-  .details {
-    top: 26px;
-    padding: 17px;
-    position: absolute;
-    right: 0;
-    left: 0;
-  }
-
-  .comments {
-    top: 230px;
-    padding: 17px;
-    position: absolute;
-    right: 0;
-    left: 0;
-  }
+.blue-header {
+  background: $blue;
+  height: 95px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-@media (max-width: 460px) {
-  .wrapper {
-    .comments {
-      top: 280px;
-    }
+.user {
+  padding: 0 20px;
+
+  .details {
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 }

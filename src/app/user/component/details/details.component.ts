@@ -1,6 +1,5 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
 import {UserInterface} from '../../model/user.interface';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -10,9 +9,11 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class DetailsComponent implements OnInit {
   @Input() user: UserInterface;
+  @ViewChild('modal') modal;
+  openModal: boolean;
+  url: string;
   likes: number;
   followers: number;
-  @Output() share: EventEmitter<any> = new EventEmitter();
 
   constructor() {
   }
@@ -20,6 +21,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.likes = this.user.likes;
     this.followers = this.user.followers;
+    this.url = window.location.href;
   }
 
   addLike() {
@@ -28,5 +30,11 @@ export class DetailsComponent implements OnInit {
 
   addFollower() {
     this.followers++;
+  }
+
+  onClickedOutside(e: Event) {
+    if (this.modal.nativeElement === e.target) {
+      this.openModal = false;
+    }
   }
 }
