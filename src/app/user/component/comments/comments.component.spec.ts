@@ -62,11 +62,11 @@ describe('CommentsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should comment owner first name is John', () => {
+  it('first name comment owner is John', () => {
     expect(component.user.comments[0].owner.firstName).toEqual('John');
   });
 
-  it('should comments length equal 1', () => {
+  it('comments length equal 1', () => {
     expect(component.user.comments.length).toEqual(1);
   });
 

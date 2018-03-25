@@ -1,16 +1,8 @@
-<div class="modal" #modal [ngClass]="{'active': openModal}" (click)="onClickedOutside($event)">
-  <div class="modal-content">
-    <button class="close-button" (click)="openModal = false">
-      <i class="fa fa-times"></i>
-    </button>
-    <p>Adres strony:</p>
-    <p>{{url}}</p>
-  </div>
-</div>
+<app-modal [openModal]="modalIsOpen" [url]="url" (modalIsClose)="closeModal($event)"></app-modal>
 
 <div class="box">
   <div class="share">
-    <button class="share-button"  (click)="(openModal = true)">
+    <button class="share-button" (click)="(modalIsOpen = true)">
       <i class="fa fa-share-square-o"></i>
     </button>
   </div>
@@ -31,7 +23,7 @@
   <div class="social">
     <div class="row">
       <div class="column">
-        <div class="number">{{likes}}</div>
+        <div class="number likes">{{likes}}</div>
         <div class="name">Likes</div>
       </div>
       <div class="delimeter"></div>
@@ -41,7 +33,7 @@
       </div>
       <div class="delimeter"></div>
       <div class="column">
-        <div class="number">{{followers}}</div>
+        <div class="number followers">{{followers}}</div>
         <div class="name">Followers</div>
       </div>
       <div class="column follow-column">

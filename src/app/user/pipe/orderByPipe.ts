@@ -1,12 +1,17 @@
 import {Pipe, PipeTransform} from '@angular/core';
+import {CommentInterface} from '../model/comment.interface';
+
+interface OrderElement {
+  creationDate: Date;
+}
 
 @Pipe({
   name: 'orderBy'
 })
 export class OrderByPipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    const newValue = value.sort((a: any, b: any) => {
+  transform(value: Array<CommentInterface>, args?: any): Array<CommentInterface> {
+    return value.sort((a: CommentInterface, b: CommentInterface) => {
       const date1 = new Date(a.creationDate);
       const date2 = new Date(b.creationDate);
 
@@ -18,7 +23,5 @@ export class OrderByPipe implements PipeTransform {
         return 0;
       }
     });
-
-    return newValue;
   }
 }

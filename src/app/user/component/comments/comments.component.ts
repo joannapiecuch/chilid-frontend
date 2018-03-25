@@ -5,8 +5,7 @@ import {NgxAutoScroll} from 'ngx-auto-scroll';
 import {UserInterface} from '../../model/user.interface';
 
 
-@Component
-({
+@Component({
   selector: 'app-comments',
   templateUrl: './comments.component.html',
   styleUrls: ['./comments.component.scss']

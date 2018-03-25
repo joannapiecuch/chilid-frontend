@@ -1,5 +1,13 @@
 import {OrderByPipe} from './orderByPipe';
 
+const defaultCommentData = {
+  owner: {
+    firstName: 'John',
+    lastName: 'Doe',
+    avatar: ''
+  },
+  content: ''
+};
 
 describe('Pipe: Default', () => {
   let pipe: OrderByPipe;
@@ -9,8 +17,8 @@ describe('Pipe: Default', () => {
   });
 
   it('orders data properly when not sorted', () => {
-    const younger = {creationDate: new Date('2010-01-01T00:00:00+00:00')};
-    const older = {creationDate: new Date('2000-01-01T00:00:00+00:00')};
+    const younger = {...defaultCommentData, creationDate: new Date('2010-01-01T00:00:00+00:00')};
+    const older = {...defaultCommentData, creationDate: new Date('2000-01-01T00:00:00+00:00')};
     const sorted = pipe.transform([younger, older]);
 
     expect(sorted[0]).toBe(older);
@@ -18,8 +26,8 @@ describe('Pipe: Default', () => {
   });
 
   it('orders data properly when already sorted', () => {
-    const younger = {creationDate: new Date('2010-01-01T00:00:00+00:00')};
-    const older = {creationDate: new Date('2000-01-01T00:00:00+00:00')};
+    const younger = {...defaultCommentData, creationDate: new Date('2010-01-01T00:00:00+00:00')};
+    const older = {...defaultCommentData, creationDate: new Date('2000-01-01T00:00:00+00:00')};
     const sorted = pipe.transform([older, younger]);
 
     expect(sorted[0]).toBe(older);
@@ -27,9 +35,9 @@ describe('Pipe: Default', () => {
   });
 
   it('orders data properly when dates are the same', () => {
-    const date1 = {creationDate: new Date('2010-01-01T00:00:00+00:00')};
-    const date2 = {creationDate: new Date('2010-01-01T00:00:00+00:00')};
-    const date3 = {creationDate: new Date('2000-01-01T00:00:00+00:00')};
+    const date1 = {...defaultCommentData, creationDate: new Date('2010-01-01T00:00:00+00:00')};
+    const date2 = {...defaultCommentData, creationDate: new Date('2010-01-01T00:00:00+00:00')};
+    const date3 = {...defaultCommentData, creationDate: new Date('2000-01-01T00:00:00+00:00')};
     const sorted = pipe.transform([date1, date3, date2]);
 
     expect(sorted[0]).toBe(date3);

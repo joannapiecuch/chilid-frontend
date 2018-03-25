@@ -5,16 +5,17 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {MomentModule} from 'angular2-moment';
 import {NgxAutoScrollModule} from 'ngx-auto-scroll';
-import {ProfileComponent} from './component/profile/profile.component';
 import {DetailsComponent} from './component/details/details.component';
 import {UserService} from './service/user.service';
 import {CommentsComponent} from './component/comments/comments.component';
 import {OrderByPipe} from './pipe/orderByPipe';
+import {UserProfileComponent} from './component/user-profile/user-profile.component';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    ProfileComponent,
+    UserProfileComponent,
     DetailsComponent,
     CommentsComponent,
     OrderByPipe
@@ -26,9 +27,10 @@ import {OrderByPipe} from './pipe/orderByPipe';
     FormsModule,
     ReactiveFormsModule,
     NgxAutoScrollModule,
+    SharedModule
   ],
   exports: [
-    ProfileComponent
+    UserProfileComponent
   ],
   providers: [UserService],
 })

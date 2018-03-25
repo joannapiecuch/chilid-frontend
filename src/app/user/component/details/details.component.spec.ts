@@ -1,7 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DetailsComponent } from './details.component';
+import {DetailsComponent} from './details.component';
 import {UserInterface} from '../../model/user.interface';
+import {ModalComponent} from '../../../../shared/modal/modal.component';
+
 
 const UserMock: UserInterface = {
   firstName: 'Harvey',
@@ -22,9 +24,9 @@ describe('DetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DetailsComponent ]
+      declarations: [DetailsComponent, ModalComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -38,16 +40,16 @@ describe('DetailsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should number of likes equal 121', () => {
+  it('number of likes are equal 121', () => {
     expect(component.user.likes).toEqual(121);
   });
 
-  it('should increase number of likes ', () => {
+  it('increase number of likes ', () => {
     component.addLike();
     expect(component.user.likes).toEqual(component.user.likes++);
   });
 
-  it('should increase number of followers ', () => {
+  it('increase number of followers ', () => {
     component.addFollower();
     expect(component.user.followers).toEqual(component.user.followers++);
   });

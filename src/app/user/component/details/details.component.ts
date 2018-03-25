@@ -1,4 +1,4 @@
-import {Component, HostListener, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {UserInterface} from '../../model/user.interface';
 
 
@@ -9,14 +9,10 @@ import {UserInterface} from '../../model/user.interface';
 })
 export class DetailsComponent implements OnInit {
   @Input() user: UserInterface;
-  @ViewChild('modal') modal;
-  openModal: boolean;
+  modalIsOpen: boolean;
   url: string;
   likes: number;
   followers: number;
-
-  constructor() {
-  }
 
   ngOnInit() {
     this.likes = this.user.likes;
@@ -32,9 +28,7 @@ export class DetailsComponent implements OnInit {
     this.followers++;
   }
 
-  onClickedOutside(e: Event) {
-    if (this.modal.nativeElement === e.target) {
-      this.openModal = false;
-    }
+  closeModal(e) {
+    this.modalIsOpen = e;
   }
 }

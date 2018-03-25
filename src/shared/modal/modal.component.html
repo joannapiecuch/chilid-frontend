@@ -1,0 +1,9 @@
+<div class="modal" #modal [ngClass]="{'active': openModal}" (click)="onClickedOutside($event)">
+  <div class="modal-content">
+    <button class="close-button" (click)="closeModal()">
+      <i class="fa fa-times"></i>
+    </button>
+    <p>Adres strony:</p>
+    <p>{{url}}</p>
+  </div>
+</div>
